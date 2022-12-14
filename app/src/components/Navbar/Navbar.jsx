@@ -1,4 +1,4 @@
-import CartWidget from "./CartWidget/CartWidget";
+import CartWidget from "../CartWidget/CartWidget";
 import { Fragment } from "react";
 import { Popover, Transition } from "@headlessui/react";
 import {
@@ -14,6 +14,7 @@ import {
   XMarkIcon,
 } from "@heroicons/react/24/outline";
 
+import { Link } from "react-router-dom";
 const solutions = [
   {
     name: "Analytics",
@@ -99,41 +100,43 @@ export default function Navbar() {
           </div>
           <Popover.Group as="nav" className="hidden space-x-10 md:flex">
             <Popover className="relative"></Popover>
-
-            <a
-              href="./"
+            <Link
+              to="./category/snikers"
               className="text-base font-medium text-gray-500 hover:text-gray-900"
             >
               Snikers
-            </a>
-            <a
-              href="./"
+            </Link>
+            <Link
+              to="./category/hoodies"
               className="text-base font-medium text-gray-500 hover:text-gray-900"
             >
               Hoodies
-            </a>
-            <a
-              href="./"
+            </Link>
+            <Link
+              to="./category/shirts"
               className="text-base font-medium text-gray-500 hover:text-gray-900"
             >
               Shirts
-            </a>
-            <a
-              href="./"
+            </Link>
+            <Link
+              to="./category/joggins"
               className="text-base font-medium text-gray-500 hover:text-gray-900"
             >
               Joggins
-            </a>
-            <a
-              href="./"
+            </Link>
+            <Link
+              to="./category/jeans"
               className="text-base font-medium text-gray-500 hover:text-gray-900"
             >
               Jeans
-            </a>
-            <a href="./">
+            </Link>
+            <Link
+              to="./category/cart"
+              className="text-base font-medium text-gray-500 hover:text-gray-900"
+            >
               {" "}
               <CartWidget />
-            </a>
+            </Link>
           </Popover.Group>
           <div className="hidden items-center justify-end md:flex md:flex-1 lg:w-0">
             <a
